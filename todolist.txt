@@ -1,5 +1,3 @@
-->making account for 
-twitter
-instagram 
-facebook
-->
+features added .....
+
+-- aws elastic ip is added for constant ip address
