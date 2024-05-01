@@ -1,3 +1,4 @@
 features added .....
 
 -- aws elastic ip is added for constant ip address
+-- welcome message to a perticular user added sucessfully to aws server 

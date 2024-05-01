@@ -9,7 +9,7 @@ driver = webdriver.Firefox()
 
 try:
     # Open the home page of your Django project
-    driver.get("http://127.0.0.1:8000/")  # Replace with the actual URL of your Django project
+    driver.get("http://127.0.0.1:8000/") 
 
     # Test Case 1: Verify navigation to different sections
     home_link = driver.find_element(By.CSS_SELECTOR, ".nav__link[href='#home']")
@@ -39,15 +39,14 @@ try:
     assert "contact" in driver.current_url.lower()
     
     #----register code----
-    driver.get("http://127.0.0.1:8000/register/")  # Replace with the actual URL of your registration page
-
+    driver.get("http://127.0.0.1:8000/register/")
     # Fill out the registration form
     username_input = driver.find_element(By.ID, "username")
     email_input = driver.find_element(By.ID, "email")
     password1_input = driver.find_element(By.ID, "password1")
     password2_input = driver.find_element(By.ID, "password2")
 
-    # Replace 'test_user', 'test@example.com', 'testpassword' with your desired credentials
+    
     username_input.send_keys("selenium")
     email_input.send_keys("baby.trishul@gmail.com")
     password1_input.send_keys("selenium")
@@ -60,13 +59,13 @@ try:
     time.sleep(5)
     
     #----login code----
-    driver.get("http://127.0.0.1:8000/login/")  # Replace with the actual URL of your login page
+    driver.get("http://127.0.0.1:8000/login/")  
 
     # Fill out the login form
     username_input = driver.find_element(By.NAME, "username")
     password_input = driver.find_element(By.NAME, "password")
 
-    # Replace 'selenium' with the username and password you provided
+    
     username_input.send_keys("selenium")
     password_input.send_keys("selenium")
 
@@ -82,8 +81,10 @@ try:
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
     print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
     print("Login successful!")
     print("All test cases passed!")
+    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
 finally:
     # Close the browser
