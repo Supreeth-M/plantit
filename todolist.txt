@@ -3,3 +3,21 @@ features added .....
 -- aws elastic ip is added for constant ip address
 -- welcome message to a perticular user added sucessfully to aws server 
 ............................................................................
+
+
+----------------------------------------------------------------------------
+-- razor pay
+-- hosting go daddy
+geo location --mapmyindia or google mapmyindia
+logistics -- ondc,shiprocket
+----------------------------------------------------------------------------
+-----Getting started with razorpat API integration
+1. adding a amount filling html css form (done)
+2. linking with assets folder and django (done)
+3. creating a new model/database model to store the data 
+4. creating API in razor pay 
+5. start coding in django to run the razor pay integration
+6. test using demo
+7. test using real payments 
+8. hosting the whole project on hiraku
+9. that is prettry much it

@@ -8,6 +8,10 @@ from django.conf import settings # for erciving the users email directly
 from django.db import IntegrityError
 from .models import Chat
 from django.utils import timezone
+import razorpay
+from .models import coffee
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 
@@ -74,3 +78,26 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
+
+
+def Razorpay(request):
+    if request.method == 'POST':
+        name = request.POST.get("name")
+        amount = int(request.POST.get("amount")) * 100
+        client = razorpay.Client(auth=("rzp_test_IN5Z7ydaazgiIb", "DgrFV2TkX2tBr14KYjxJIhs8"))
+        payment = client.order.create({'amount': int(amount), 'currency': 'INR', 'payment_capture': '1'})
+        print(payment)
+        Coffee = coffee(name=name, amount=amount, payment_id=payment['id'])
+        Coffee.save()
+        return render(request, 'razorpay.html', {'payment': payment})
+    
+    return render(request , 'razorpay.html')
+
+
+@csrf_exempt
+def done(request):
+    if request.method == 'POST':
+        a = request.POST
+        print(a)
+
+    return render(request, 'done.html')

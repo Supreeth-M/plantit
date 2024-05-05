@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+3-786ff6*c(#p&(bie9l7reb!)4h7b*8*o^8=s=-#gl8&4h5n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.105.136.2']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -142,3 +142,6 @@ EMAIL_USE_TLS = True  # or False depending on your email configuration
 DEFAULT_FROM_EMAIL = 'godhani.ripal@gmail.com'
 # settings.py
 ELASTIC_EMAIL_API_KEY = '27F65DAB12FC9AA759931C0310F36158F40CA9E9D8C49E26CFB251B27520D3DF9B13701F25AC8166666F3F63E0350B4B'
+
+
+APPEND_SLASH = False

@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .success-image {
+            width: 170px;
+            display: block;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <img class="success-image" src=" {% static 'img/success.png' %}" alt="Payment Successful">
+    <h1>Payment was successful</h1>
+</body>
+</html>
